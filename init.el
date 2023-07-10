@@ -42,23 +42,31 @@
 ;; -- PACKAGES --
 ;; --------------
 
+(require 'use-package)
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
-(require 'smex)
-(require 'ido)
-(require 'company)
-(require 'eglot)
-(require 'dired-x)
-(require 'magit)
-(require 'which-key)
-(require 'org)
-(require 'org-roam)
+(use-package smex
+  :bind ("M-x" . smex))
+(use-package compile
+  :bind ("C-x c" . compile))
+(use-package ido
+  :config
+  (ido-everywhere))
+(use-package company
+  :config
+  (setq company-idle-delay nil)
+  (global-company-mode)
+  :bind ("C-<tab>" . company-complete))
+(use-package eglot)
+(use-package dired-x)
+(use-package magit)
+(use-package which-key
+  :config
+  (which-key-mode))
+(use-package org)
+(use-package org-roam)
 
-(ido-everywhere)
-(which-key-mode)
-(recentf-mode)
-(global-company-mode)
 
 ;; ---------------
 ;; -- FUNCTIONS --
@@ -81,12 +89,6 @@
 (setq auto-save-file-name-transforms
       `((".*" ,(concat user-emacs-directory "auto-save/") t)))
 
-;; disable company automatic completion
-(setq company-idle-delay nil)
-
-
-
-
 
 ;; --------------
 ;; -- KEYBINDS --
@@ -95,12 +97,6 @@
 ;; sudo-find-file
 (global-set-key (kbd "C-x C-r") 'sudo-find-file)
 
-;; smex
-(global-set-key (kbd "M-x") 'smex)
-
-;; company
-(global-set-key (kbd "C-<tab>") 'company-complete)
-
 ;; window and buffer manipulations
 (global-set-key (kbd "C-x C-k") 'kill-current-buffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
@@ -108,9 +104,6 @@
 ;; other-window
 (global-unset-key (kbd "C-x o"))
 (global-set-key (kbd "M-o") 'other-window)
-
-;; compile
-(global-set-key (kbd "C-x c") 'compile)
 
 
 ;; ------------
@@ -122,7 +115,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(org-roam eglot company rust-mode smex magit which-key)))
+ '(package-selected-packages
+   '(use-package org-roam eglot company rust-mode smex magit which-key)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
