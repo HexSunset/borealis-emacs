@@ -18,4 +18,9 @@
   (forward-line -1)
   (indent-for-tab-command))
 
+(defun make-directory-if-not (DIR)
+  "Create DIR if it doesn't exist and return it's name"
+  (if (not (file-directory-p DIR)) (make-directory DIR))
+  DIR)
+
 (provide 'borealis-fn)

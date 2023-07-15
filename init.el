@@ -69,7 +69,7 @@
 (use-package org)
 (use-package org-roam
   :custom
-  (org-roam-directory "~/roam")
+  (org-roam-directory (make-directory-if-not "~/roam"))
   :bind (("C-c n l" . org-roam-buffer-toggle)
 	 ("C-c n f" . org-roam-node-find)
 	 ("C-c n i" . org-roam-node-insert))
@@ -85,9 +85,9 @@
 
 ;; backup files are now only in /tmp
 (setq backup-directory-alist
-      `((".*" . ,(concat user-emacs-directory "backups/"))))
+      `((".*" . ,(make-directory-if-not (concat user-emacs-directory "backups/")))))
 (setq auto-save-file-name-transforms
-      `((".*" ,(concat user-emacs-directory "auto-save/") t)))
+      `((".*" ,(make-directory-if-not (concat user-emacs-directory "auto-save/")) t)))
 
 
 ;; --------------
