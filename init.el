@@ -84,6 +84,9 @@
 (put 'dired-find-alternate-file 'disabled nil)
 
 (global-auto-revert-mode 1)
+;; auto refresh things like dired, quietly
+(setq global-auto-revert-non-file-buffers t)
+(setq auto-revert-verbose nil)
 
 ;; backup files are now only in /tmp
 (setq backup-directory-alist
