@@ -32,7 +32,7 @@
 (global-display-line-numbers-mode)
 
 ;; Theme
-(load-theme 'modus-vivendi)
+(load-theme 'modus-vivendi t)
 
 (add-to-list 'default-frame-alist
 	     '(font . "Iosevka-15"))
@@ -65,7 +65,14 @@
   :config
   (which-key-mode))
 (use-package org)
-(use-package org-roam)
+(use-package org-roam
+  :custom
+  (org-roam-directory "~/roam")
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+	 ("C-c n f" . org-roam-node-find)
+	 ("C-c n i" . org-roam-node-insert))
+  :config
+  (org-roam-setup))
 
 
 ;; ---------------
@@ -116,7 +123,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(use-package org-roam eglot company rust-mode smex magit which-key)))
+   '( use-package org-roam eglot company rust-mode smex magit which-key)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
