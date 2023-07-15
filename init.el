@@ -16,6 +16,9 @@
 ;;
 ;; config by Aurora <3
 
+(add-to-list 'load-path (concat user-emacs-directory "borealis-fn"))
+(require 'borealis-fn)
+
 
 ;; ----------------
 ;; -- APPEARANCE --
@@ -75,15 +78,6 @@
   (org-roam-setup))
 
 
-;; ---------------
-;; -- FUNCTIONS --
-;; ---------------
-(defun sudo-find-file ()
-  "Open the file with sudo through TRAMP"
-  (interactive)
-    (ido-find-file-in-dir "/sudo::/"))
-
-
 ;; --------------
 ;; -- SETTINGS --
 ;; --------------
@@ -101,16 +95,20 @@
 ;; -- KEYBINDS --
 ;; --------------
 
-;; sudo-find-file
-(global-set-key (kbd "C-x C-r") 'sudo-find-file)
-
 ;; window and buffer manipulations
 (global-set-key (kbd "C-x C-k") 'kill-current-buffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;; other-window
 (global-unset-key (kbd "C-x o"))
+
 (global-set-key (kbd "M-o") 'other-window)
+
+(global-set-key (kbd "C-x C-r") 'sudo-find-file)
+
+(global-set-key (kbd "<C-return>") 'open-line-below)
+
+(global-set-key (kbd "<C-S-return>") 'open-line-above)
 
 
 ;; ------------
