@@ -83,6 +83,8 @@
 
 (put 'dired-find-alternate-file 'disabled nil)
 
+(global-auto-revert-mode 1)
+
 ;; backup files are now only in /tmp
 (setq backup-directory-alist
       `((".*" . ,(make-directory-if-not (concat user-emacs-directory "backups/")))))
