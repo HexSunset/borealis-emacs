@@ -16,7 +16,7 @@
 ;;
 ;; config by Aurora <3
 
-(load-file (concat user-emacs-directory "borealis-fn"))
+(load-file (concat user-emacs-directory "borealis-fn.el"))
 
 
 ;; ----------------
