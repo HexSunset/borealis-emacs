@@ -66,10 +66,15 @@
 (use-package which-key
   :config
   (which-key-mode))
-(use-package org)
 (use-package calendar
   :custom
   (calendar-week-start-day 1))
+(use-package org
+  :custom
+  (org-directory (make-directory-if-not "~/org"))
+  (org-default-notes-file (concat org-directory "/notes.org"))
+  :bind (("C-c a" . org-agenda)
+	 ("C-c c" . org-capture)))
 (use-package org-roam
   :custom
   (org-roam-directory (make-directory-if-not "~/roam"))
