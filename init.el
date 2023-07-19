@@ -67,6 +67,9 @@
   :config
   (which-key-mode))
 (use-package org)
+(use-package calendar
+  :custom
+  (calendar-week-start-day 1))
 (use-package org-roam
   :custom
   (org-roam-directory (make-directory-if-not "~/roam"))
