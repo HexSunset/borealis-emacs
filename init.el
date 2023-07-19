@@ -73,6 +73,7 @@
   :custom
   (org-directory (make-directory-if-not "~/org"))
   (org-default-notes-file (concat org-directory "/notes.org"))
+  (org-agenda-start-on-weekday nil)
   :bind (("C-c a" . org-agenda)
 	 ("C-c c" . org-capture)))
 (use-package org-roam
