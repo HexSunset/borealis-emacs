@@ -74,6 +74,8 @@
   (org-directory (make-directory-if-not "~/org"))
   (org-default-notes-file (concat org-directory "/notes.org"))
   (org-agenda-start-on-weekday nil)
+  (org-agenda-skip-scheduled-if-done t)
+  (org-agenda-skip-deadline-if-done t)
   :bind (("C-c a" . org-agenda)
 	 ("C-c c" . org-capture)))
 (use-package org-roam
