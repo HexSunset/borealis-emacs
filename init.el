@@ -88,6 +88,7 @@
 ;; --------------
 ;; -- SETTINGS --
 ;; --------------
+;; settings that don't belong with a specific package
 
 (put 'dired-find-alternate-file 'disabled nil)
 
@@ -106,6 +107,7 @@
 ;; --------------
 ;; -- KEYBINDS --
 ;; --------------
+;; binds that don't fit under a specific package
 
 ;; window and buffer manipulations
 (global-set-key (kbd "C-x C-k") 'kill-current-buffer)
