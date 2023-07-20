@@ -67,24 +67,25 @@
   :config
   (which-key-mode))
 (use-package calendar
-  :custom
-  (calendar-week-start-day 1))
+  :config
+  (setq calendar-week-start-day 1))
 (use-package org
-  :custom
-  (org-directory (make-directory-if-not "~/org"))
-  (org-default-notes-file (concat org-directory "/notes.org"))
-  (org-agenda-start-on-weekday nil)
-  (org-agenda-skip-scheduled-if-done t)
-  (org-agenda-skip-deadline-if-done t)
+  :init
+  (setq org-directory (make-directory-if-not "~/org"))
+  :config
+  (setq org-agenda-files (directory-files org-directory))
+  (setq org-default-notes-file (concat org-directory "/notes.org"))
+  (setq org-agenda-start-on-weekday nil)
+  (setq org-agenda-skip-scheduled-if-done t)
+  (setq org-agenda-skip-deadline-if-done t)
   :bind (("C-c a" . org-agenda)
 	 ("C-c c" . org-capture)))
 (use-package org-roam
-  :custom
-  (org-roam-directory (make-directory-if-not "~/roam"))
   :bind (("C-c n l" . org-roam-buffer-toggle)
 	 ("C-c n f" . org-roam-node-find)
 	 ("C-c n i" . org-roam-node-insert))
   :config
+  (setq org-roam-directory (make-directory-if-not "~/roam"))
   (org-roam-setup))
 
 
