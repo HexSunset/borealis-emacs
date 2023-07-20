@@ -23,4 +23,9 @@
   (if (not (file-directory-p DIR)) (make-directory DIR))
   DIR)
 
+(defun find-org-file ()
+  "Open a find-file dialog in the org directory"
+  (interactive)
+  (ido-find-file-in-dir org-directory))
+
 (provide 'borealis-fn)

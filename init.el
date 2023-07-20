@@ -124,6 +124,8 @@
 
 (global-set-key (kbd "C-x C-r") 'sudo-find-file)
 
+(global-set-key (kbd "C-x C-o") 'find-org-file)
+
 (global-set-key (kbd "<C-return>") 'open-line-below)
 
 (global-set-key (kbd "<C-S-return>") 'open-line-above)
