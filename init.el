@@ -34,7 +34,7 @@
 (global-display-line-numbers-mode)
 
 ;; Theme
-(load-theme 'modus-vivendi t)
+(load-theme 'gruber-darker t)
 
 (add-to-list 'default-frame-alist
 	     '(font . "Iosevka-15"))
