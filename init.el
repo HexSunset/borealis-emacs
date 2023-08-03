@@ -117,9 +117,7 @@
 (global-set-key (kbd "C-x C-k") 'kill-current-buffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-;; other-window
 (global-unset-key (kbd "C-x o"))
-
 (global-set-key (kbd "M-o") 'other-window)
 
 (global-set-key (kbd "C-x C-r") 'sudo-find-file)
