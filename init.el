@@ -128,6 +128,9 @@
 
 (global-set-key (kbd "<C-M-return>") 'open-line-above)
 
+(global-unset-key (kbd "C-x C-n")) ;previously referred to set-goal-column
+(global-set-key (kbd "C-x C-n") 'revert-buffer-quick)
+
 
 ;; ------------
 ;; -- CUSTOM --
