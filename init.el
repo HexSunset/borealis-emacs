@@ -86,6 +86,8 @@
   :config
   (setq org-roam-directory (make-directory-if-not "~/roam"))
   (org-roam-setup))
+(use-package slime
+  :init (setq inferior-lisp-program "sbcl"))
 
 
 ;; --------------
@@ -141,7 +143,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(gruber-darker-theme use-package org-roam eglot company rust-mode smex magit which-key)))
+   '(smartparens rainbow-delimiters slime paredit markdown-preview-mode markdown-mode gruber-darker-theme use-package org-roam eglot company rust-mode smex magit which-key)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
