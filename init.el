@@ -95,6 +95,9 @@
 ;; --------------
 ;; settings that don't belong with a specific package
 
+;; I'm tired of having to write out yes and no
+(setq use-short-answers t)
+
 (put 'dired-find-alternate-file 'disabled nil)
 
 (global-auto-revert-mode 1)
