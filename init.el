@@ -138,6 +138,10 @@
 (global-unset-key (kbd "C-x C-n")) ;previously referred to set-goal-column
 (global-set-key (kbd "C-x C-n") 'revert-buffer-quick)
 
+(global-unset-key (kbd "C-h"))
+(global-set-key (kbd "C-h") 'backward-delete-char)
+(global-unset-key (kbd "M-h")) ;previously 'mark-paragraph
+(global-set-key (kbd "M-h") 'backward-kill-word)
 
 ;; ------------
 ;; -- CUSTOM --
