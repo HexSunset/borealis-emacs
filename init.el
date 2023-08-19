@@ -50,6 +50,7 @@
 (use-package gruber-darker-theme
   :init (load-theme 'gruber-darker t))
 (use-package compile
+  :init (setq compile-command nil)
   :bind ("C-x c" . compile))
 (use-package ido
   :config
@@ -88,6 +89,8 @@
   (org-roam-setup))
 (use-package slime
   :init (setq inferior-lisp-program "sbcl"))
+(use-package rust-mode
+  :config (setq compile-command "cargo "))
 
 
 ;; --------------
