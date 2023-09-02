@@ -54,6 +54,7 @@
   :bind ("C-x c" . compile))
 (use-package ido
   :config
+  (setq ido-ignore-buffers '("\\` " "\\`*[:alnum:]*\\`*"))
   (ido-everywhere))
 (use-package company
   :config
