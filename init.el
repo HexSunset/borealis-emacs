@@ -90,8 +90,7 @@
   (org-roam-setup))
 (use-package slime
   :init (setq inferior-lisp-program "sbcl"))
-(use-package rust-mode
-  :config (setq compile-command "cargo "))
+(use-package rust-mode)
 
 
 ;; --------------
