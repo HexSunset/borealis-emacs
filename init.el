@@ -122,6 +122,7 @@
 
 ;; window and buffer manipulations
 (global-set-key (kbd "C-x C-k") 'kill-current-buffer)
+(global-set-key (kbd "C-x 9") 'kill-buffer-and-window)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 (global-unset-key (kbd "C-x o"))
