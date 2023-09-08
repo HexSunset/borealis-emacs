@@ -70,6 +70,7 @@
 (use-package calendar
   :config
   (setq calendar-week-start-day 1))
+(use-package typst-mode)
 (use-package org
   :init
   (setq org-directory (make-directory-if-not "~/org"))
