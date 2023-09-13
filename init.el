@@ -126,7 +126,7 @@
 (global-set-key (kbd "C-x 9") 'kill-buffer-and-window)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-(global-unset-key (kbd "C-x o"))
+(global-unset-key (kbd "C-x o")) ;other-window
 (global-set-key (kbd "M-o") 'other-window)
 
 (global-set-key (kbd "C-x C-r") 'sudo-find-file)
@@ -137,12 +137,12 @@
 
 (global-set-key (kbd "<C-M-return>") 'open-line-above)
 
-(global-unset-key (kbd "C-x C-n")) ;previously referred to set-goal-column
+(global-unset-key (kbd "C-x C-n")) ;set-goal-column
 (global-set-key (kbd "C-x C-n") 'revert-buffer-quick)
 
 (global-unset-key (kbd "C-h"))
 (global-set-key (kbd "C-h") 'backward-delete-char)
-(global-unset-key (kbd "M-h")) ;previously 'mark-paragraph
+(global-unset-key (kbd "M-h")) ;mark-paragraph
 (global-set-key (kbd "M-h") 'backward-kill-word)
 
 
