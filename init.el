@@ -130,10 +130,10 @@
 (global-set-key (kbd "C-x o") 'clone-line-below)
 
 (global-unset-key (kbd "C-M-p"))
-(global-set-key (kbd "C-M-p") 'move-line-up)
+(global-set-key (kbd "C-M-p") 'move-text-up)
 
 (global-unset-key (kbd "C-M-n"))
-(global-set-key (kbd "C-M-n") 'move-line-down)
+(global-set-key (kbd "C-M-n") 'move-text-down)
 
 (global-set-key (kbd "M-o") 'other-window)
 
