@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 (defun sudo-find-file ()
   "Open the file with sudo through TRAMP"
   (interactive)
