@@ -33,8 +33,10 @@
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
 
-(add-to-list 'default-frame-alist
-	     '(font . "Iosevka-15"))
+(set-face-attribute 'fixed-pitch nil :family "Iosevka" :height 150)
+(set-face-attribute 'fixed-pitch-serif nil :family "Iosevka Slab" :height 150)
+(set-face-attribute 'variable-pitch nil :family "Iosevka Aile" :height 150)
+(set-face-attribute 'default nil :family "Iosevka" :height 150)
 
 
 ;; --------------
@@ -134,10 +136,10 @@
 (global-set-key (kbd "C-x o") 'clone-line-below)
 
 (global-unset-key (kbd "C-M-p"))
-(global-set-key (kbd "C-M-p") 'move-line-up)
+(global-set-key (kbd "C-M-p") 'move-text-up)
 
 (global-unset-key (kbd "C-M-n"))
-(global-set-key (kbd "C-M-n") 'move-line-down)
+(global-set-key (kbd "C-M-n") 'move-text-down)
 
 (global-set-key (kbd "M-o") 'other-window)
 

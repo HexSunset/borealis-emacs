@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 (defun sudo-find-file ()
   "Open the file with sudo through TRAMP"
   (interactive)
@@ -27,23 +29,38 @@
   (newline)
   (yank))
 
-(defun move-line-up ()
-  "Swap the current line and the line above it"
-  (interactive)
-  (beginning-of-line)
-  (kill-line 1)
-  (previous-line)
-  (yank)
-  (backward-char))
+(defun move-text-internal (arg)
+   (cond
+    ((and mark-active transient-mark-mode)
+     (if (> (point) (mark))
+            (exchange-point-and-mark))
+     (let ((column (current-column))
+              (text (delete-and-extract-region (point) (mark))))
+       (forward-line arg)
+       (move-to-column column t)
+       (set-mark (point))
+       (insert text)
+       (exchange-point-and-mark)
+       (setq deactivate-mark nil)))
+    (t
+     (beginning-of-line)
+     (when (or (> arg 0) (not (bobp)))
+       (forward-line)
+       (when (or (< arg 0) (not (eobp)))
+            (transpose-lines arg))
+       (forward-line -1)))))
 
-(defun move-line-down ()
-  "Swap the current line and the line above it"
-  (interactive)
-  (beginning-of-line)
-  (kill-line 1)
-  (next-line)
-  (yank)
-  (backward-char))
+(defun move-text-down (arg)
+  "Move region (transient-mark-mode active) or current line
+  arg lines down."
+  (interactive "*p")
+  (move-text-internal arg))
+
+(defun move-text-up (arg)
+  "Move region (transient-mark-mode active) or current line
+  arg lines up."
+  (interactive "*p")
+  (move-text-internal (- arg)))
 
 (defun make-directory-if-not (DIR)
   "Create DIR if it doesn't exist and return it's name"
