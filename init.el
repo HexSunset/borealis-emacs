@@ -52,6 +52,10 @@
 (use-package compile
   :init (setq compile-command nil)
   :bind ("C-x c" . compile))
+(use-package fancy-compilation
+  :commands (fancy-compilation-mode))
+(with-eval-after-load 'compile
+  (fancy-compilation-mode))
 (use-package ido
   :config
   (setq ido-ignore-buffers '("\\` " "\\`*[:alnum:]*\\`*"))
@@ -164,7 +168,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(smartparens rainbow-delimiters slime paredit markdown-preview-mode markdown-mode gruber-darker-theme use-package org-roam eglot company rust-mode smex magit which-key)))
+   '(fancy-compilation smartparens rainbow-delimiters slime paredit markdown-preview-mode markdown-mode gruber-darker-theme use-package org-roam eglot company rust-mode smex magit which-key)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
