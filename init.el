@@ -104,6 +104,7 @@
 ;; I'm tired of having to write out yes and no
 (setq use-short-answers t)
 
+(setq dired-listing-switches "-alh")
 (put 'dired-find-alternate-file 'disabled nil)
 
 (global-auto-revert-mode 1)
