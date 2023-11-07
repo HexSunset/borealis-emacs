@@ -133,8 +133,7 @@
 (global-set-key (kbd "C-x 9") 'kill-buffer-and-window)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-(global-unset-key (kbd "C-x o")) ;other-window
-(global-set-key (kbd "C-x o") 'clone-line-below)
+(global-set-key (kbd "C-c o") 'clone-line-below)
 
 (global-unset-key (kbd "C-M-p"))
 (global-set-key (kbd "C-M-p") 'move-text-up)
@@ -142,7 +141,6 @@
 (global-unset-key (kbd "C-M-n"))
 (global-set-key (kbd "C-M-n") 'move-text-down)
 
-(global-set-key (kbd "M-o") 'other-window)
 
 (global-set-key (kbd "C-x C-r") 'sudo-find-file)
 
