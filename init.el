@@ -48,7 +48,8 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
 (use-package smex
-  :bind ("M-x" . smex))
+  :bind (("M-x" . smex)
+	 ("M-X" . smex-major-mode-commands)))
 (use-package gruber-darker-theme
   :init (load-theme 'gruber-darker t))
 (use-package compile
