@@ -87,16 +87,7 @@
   (setq org-default-notes-file (concat org-directory "/notes.org"))
   (setq org-agenda-start-on-weekday nil)
   (setq org-agenda-skip-scheduled-if-done t)
-  (setq org-agenda-skip-deadline-if-done t)
-  :bind (("C-c a" . org-agenda)
-	 ("C-c c" . org-capture)))
-(use-package org-roam
-  :bind (("C-c n l" . org-roam-buffer-toggle)
-	 ("C-c n f" . org-roam-node-find)
-	 ("C-c n i" . org-roam-node-insert))
-  :config
-  (setq org-roam-directory (make-directory-if-not "~/roam"))
-  (org-roam-setup))
+  (setq org-agenda-skip-deadline-if-done t))
 (use-package slime
   :init (setq inferior-lisp-program "sbcl"))
 (use-package rust-mode)
