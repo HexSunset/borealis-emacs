@@ -50,6 +50,7 @@
 (use-package smex
   :bind (("M-x" . smex)
 	 ("M-X" . smex-major-mode-commands)))
+(use-package hydra)
 (use-package gruber-darker-theme
   :init (load-theme 'gruber-darker t))
 (use-package compile
@@ -168,7 +169,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(vterm fancy-compilation smartparens rainbow-delimiters slime paredit markdown-preview-mode markdown-mode gruber-darker-theme use-package org-roam eglot company rust-mode smex magit which-key)))
+   '(hydra vterm fancy-compilation smartparens rainbow-delimiters slime paredit markdown-preview-mode markdown-mode gruber-darker-theme use-package org-roam eglot company rust-mode smex magit which-key)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
