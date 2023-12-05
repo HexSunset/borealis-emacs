@@ -144,10 +144,10 @@
 (global-unset-key (kbd "C-x C-n")) ;set-goal-column
 (global-set-key (kbd "C-x C-n") 'revert-buffer-quick)
 
-(global-unset-key (kbd "C-h"))
-(global-set-key (kbd "C-h") 'backward-delete-char)
-(global-unset-key (kbd "M-h")) ;mark-paragraph
-(global-set-key (kbd "M-h") 'backward-kill-word)
+;; (global-unset-key (kbd "C-h"))
+;; (global-set-key (kbd "C-h") 'backward-delete-char)
+;; (global-unset-key (kbd "M-h")) ;mark-paragraph
+;; (global-set-key (kbd "M-h") 'backward-kill-word)
 
 
 ;; ------------
