@@ -56,8 +56,8 @@
 (use-package compile
   :init (setq compile-command nil)
   :bind ("C-x c" . compile))
-(use-package fancy-compilation
-  :commands (fancy-compilation-mode))
+;;(use-package fancy-compilation
+;;  :commands (fancy-compilation-mode))
 (with-eval-after-load 'compile
   (fancy-compilation-mode))
 (use-package vterm)
