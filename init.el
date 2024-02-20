@@ -51,7 +51,12 @@
 (load-theme 'gruber-darker t)
 
 (require 'ido)
+(setq ido-ignore-buffers '("\*[a-zA-Z0-9]*\*"))
+
 (ido-everywhere 1)
+
+(require 'which-key)
+(which-key-mode 1)
 
 
 ;; --------------
