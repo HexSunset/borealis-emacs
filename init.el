@@ -51,7 +51,8 @@
 (load-theme 'gruber-darker t)
 
 (require 'ido)
-(setq ido-ignore-buffers '("\*[a-zA-Z0-9]*\*"))
+(setq borealis-ido-allow-buffers '("*info*" "*compilation*" "*ansi-term*"))
+(setq ido-ignore-buffers '("\\` " borealis-ido-ignore-buffers))
 
 (ido-everywhere 1)
 

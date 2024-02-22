@@ -1,5 +1,10 @@
 ;; -*- lexical-binding: t; -*-
 
+(defun borealis-ido-ignore-buffers (name)
+  "Ignore all non-user (*starred*) buffers except the ones in borealis-ido-allow-buffers"
+  (and (string-match "^\*" name)
+       (not (member name borealis-ido-allow-buffers))))
+
 (defun sudo-find-file ()
   "Open the file with sudo through TRAMP"
   (interactive)
