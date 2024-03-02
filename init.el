@@ -106,6 +106,8 @@
 
 (global-set-key (kbd "<C-M-return>") 'open-line-above)
 
+(global-set-key (kbd "<f5>") 'compile)
+
 
 ;; ------------
 ;; -- CUSTOM --
