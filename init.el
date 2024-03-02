@@ -47,8 +47,8 @@
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'execute-extended-command)
 
-(require 'gruber-darker-theme)
-(load-theme 'gruber-darker t)
+;;(require 'gruber-darker-theme)
+(load-theme 'modus-vivendi t)
 
 (require 'ido)
 (setq borealis-ido-allow-buffers '("*info*" "*compilation*" "*ansi-term*"))
