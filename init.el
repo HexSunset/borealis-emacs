@@ -40,27 +40,6 @@
 
 
 ;; --------------
-;; -- PACKAGES --
-;; --------------
-
-(require 'smex)
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'execute-extended-command)
-
-;;(require 'gruber-darker-theme)
-(load-theme 'modus-vivendi t)
-
-(require 'ido)
-(setq borealis-ido-allow-buffers '("*info*" "*compilation*" "*ansi-term*"))
-(setq ido-ignore-buffers '("\\` " borealis-ido-ignore-buffers))
-
-(ido-everywhere 1)
-
-(require 'which-key)
-(which-key-mode 1)
-
-
-;; --------------
 ;; -- SETTINGS --
 ;; --------------
 ;; settings that don't belong with a specific package
@@ -80,6 +59,33 @@
       `((".*" . ,(make-directory-if-not (concat user-emacs-directory "backups/")))))
 (setq auto-save-file-name-transforms
       `((".*" ,(make-directory-if-not (concat user-emacs-directory "auto-save/")) t)))
+
+
+;; --------------
+;; -- PACKAGES --
+;; --------------
+
+(use-package smex
+  :bind (("M-x" . smex)
+	 ("M-X" . execute-extended-command)))
+
+(load-theme 'modus-vivendi t)
+
+(use-package ido
+  :config
+  (setq borealis-ido-allow-buffers '("*info*" "*compilation*" "*ansi-term*"))
+  (setq ido-ignore-buffers '("\\` " borealis-ido-ignore-buffers))
+  (ido-everywhere 1))
+
+(use-package which-key
+  :config
+  (which-key-mode 1))
+
+(use-package company
+  :config
+  (setq company-idle-delay nil)
+  (global-company-mode)
+  :bind ("C-<tab>" . company-complete))
 
 
 ;; --------------
@@ -119,7 +125,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(markdown-mode gruber-darker-theme company rust-mode smex magit which-key)))
+   '(use-package markdown-mode gruber-darker-theme company rust-mode smex magit which-key)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
