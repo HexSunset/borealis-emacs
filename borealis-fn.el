@@ -1,5 +1,12 @@
 ;; -*- lexical-binding: t; -*-
 
+(defun be/require (package)
+  "Load a package or install if it isn't present"
+  (require 'package)
+  (if (not (package-installed-p package))
+      (package-install package))
+  (require package))
+
 (defun be/ido-ignore-buffers (name)
   "Ignore all non-user (*starred*) buffers except the ones in be/ido-allow-buffers"
   (and (string-match "^\*" name)

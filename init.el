@@ -67,6 +67,11 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
+(be/require 'use-package)
+
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
+
 (use-package smex
   :bind (("M-x" . smex)
 	 ("M-X" . execute-extended-command)))
