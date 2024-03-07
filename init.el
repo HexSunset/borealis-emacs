@@ -56,9 +56,9 @@
 
 ;; backup files are now only in /tmp
 (setq backup-directory-alist
-      `((".*" . ,(make-directory-if-not (concat user-emacs-directory "backups/")))))
+      `((".*" . ,(be/make-directory-if-not (concat user-emacs-directory "backups/")))))
 (setq auto-save-file-name-transforms
-      `((".*" ,(make-directory-if-not (concat user-emacs-directory "auto-save/")) t)))
+      `((".*" ,(be/make-directory-if-not (concat user-emacs-directory "auto-save/")) t)))
 
 
 ;; --------------
