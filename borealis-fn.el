@@ -1,23 +1,23 @@
 ;; -*- lexical-binding: t; -*-
 
-(defun borealis-ido-ignore-buffers (name)
-  "Ignore all non-user (*starred*) buffers except the ones in borealis-ido-allow-buffers"
+(defun be/ido-ignore-buffers (name)
+  "Ignore all non-user (*starred*) buffers except the ones in be/ido-allow-buffers"
   (and (string-match "^\*" name)
-       (not (member name borealis-ido-allow-buffers))))
+       (not (member name be/ido-allow-buffers))))
 
-(defun sudo-find-file ()
+(defun be/sudo-find-file ()
   "Open the file with sudo through TRAMP"
   (interactive)
     (ido-find-file-in-dir "/sudo::/"))
 
-(defun open-line-below ()
+(defun be/open-line-below ()
   "Create a newline below the current line"
   (interactive)
   (end-of-line)
   (newline)
   (indent-for-tab-command))
 
-(defun open-line-above ()
+(defun be/open-line-above ()
   "Create a newline above the current line"
   (interactive)
   (beginning-of-line)
@@ -25,7 +25,7 @@
   (forward-line -1)
   (indent-for-tab-command))
 
-(defun clone-line-below ()
+(defun be/clone-line-below ()
   "Create a copy of the current line below"
   (interactive)
   (beginning-of-line)
@@ -34,7 +34,7 @@
   (newline)
   (yank))
 
-(defun move-text-internal (arg)
+(defun be/move-text-internal (arg)
    (cond
     ((and mark-active transient-mark-mode)
      (if (> (point) (mark))
@@ -55,24 +55,24 @@
             (transpose-lines arg))
        (forward-line -1)))))
 
-(defun move-text-down (arg)
+(defun be/move-text-down (arg)
   "Move region (transient-mark-mode active) or current line
   arg lines down."
   (interactive "*p")
-  (move-text-internal arg))
+  (be/move-text-internal arg))
 
-(defun move-text-up (arg)
+(defun be/move-text-up (arg)
   "Move region (transient-mark-mode active) or current line
   arg lines up."
   (interactive "*p")
   (move-text-internal (- arg)))
 
-(defun make-directory-if-not (DIR)
+(defun be/make-directory-if-not (DIR)
   "Create DIR if it doesn't exist and return it's name"
   (if (not (file-directory-p DIR)) (make-directory DIR))
   DIR)
 
-(defun find-org-file ()
+(defun be/find-org-file ()
   "Open a find-file dialog in the org directory"
   (interactive)
   (ido-find-file-in-dir org-directory))

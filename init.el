@@ -75,8 +75,8 @@
 
 (use-package ido
   :config
-  (setq borealis-ido-allow-buffers '("*info*" "*compilation*" "*ansi-term*"))
-  (setq ido-ignore-buffers '("\\` " borealis-ido-ignore-buffers))
+  (setq be/ido-allow-buffers '("*info*" "*compilation*" "*ansi-term*"))
+  (setq ido-ignore-buffers '("\\` " be/ido-ignore-buffers))
   (ido-everywhere 1))
 
 (use-package which-key
@@ -100,19 +100,19 @@
 (global-set-key (kbd "C-x 9") 'kill-buffer-and-window)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-(global-set-key (kbd "C-c o") 'clone-line-below)
+(global-set-key (kbd "C-c o") 'be/clone-line-below)
 
 (global-unset-key (kbd "C-M-p"))
-(global-set-key (kbd "C-M-p") 'move-text-up)
+(global-set-key (kbd "C-M-p") 'be/move-text-up)
 
 (global-unset-key (kbd "C-M-n"))
-(global-set-key (kbd "C-M-n") 'move-text-down)
+(global-set-key (kbd "C-M-n") 'be/move-text-down)
 
-(global-set-key (kbd "C-x C-r") 'sudo-find-file)
+(global-set-key (kbd "C-x C-r") 'be/sudo-find-file)
 
-(global-set-key (kbd "<C-return>") 'open-line-below)
+(global-set-key (kbd "<C-return>") 'be/open-line-below)
 
-(global-set-key (kbd "<C-M-return>") 'open-line-above)
+(global-set-key (kbd "<C-M-return>") 'be/open-line-above)
 
 (global-set-key (kbd "<f5>") 'compile)
 
