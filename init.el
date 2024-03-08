@@ -79,7 +79,9 @@
   :bind (("M-x" . smex)
 	 ("M-X" . execute-extended-command)))
 
-(load-theme 'modus-vivendi t)
+(use-package gruber-darker-theme
+  :config
+  (load-theme 'gruber-darker t))
 
 (use-package ido
   :config
