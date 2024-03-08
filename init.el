@@ -23,6 +23,9 @@
 ;; -- APPEARANCE --
 ;; ----------------
 
+;; Fix emacs having gaps while fullscreen
+(setq frame-resize-pixelwise t)
+
 ;; Disable unnecessary UI
 (setq inhibit-startup-screen t)
 (menu-bar-mode -1)
