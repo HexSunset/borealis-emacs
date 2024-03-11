@@ -79,6 +79,15 @@
   :bind (("M-x" . smex)
 	 ("M-X" . execute-extended-command)))
 
+(defun borealis-cc-mode-fix-indents ()
+  "Set indents to 4 spaces, like one would expect"
+  (setq c-basic-offset 4)
+  (c-set-offset 'substatement-open 0))
+(use-package c-mode
+  :hook borealis-cc-mode-fix-indents)
+(use-package c++-mode
+  :hook borealis-cc-mode-fix-indents)
+
 (use-package gruber-darker-theme
   :config
   (load-theme 'gruber-darker t))
