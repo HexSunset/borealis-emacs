@@ -84,4 +84,9 @@
   (interactive)
   (ido-find-file-in-dir org-directory))
 
+(defun be/cc-mode-fix-indents ()
+  "Set indents to 4 spaces, like one would expect"
+  (setq c-basic-offset 4)
+  (c-set-offset 'substatement-open 0))
+
 (provide 'borealis-fn)
