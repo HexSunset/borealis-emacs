@@ -96,6 +96,8 @@
   :config
   (which-key-mode 1))
 
+(use-package magit)
+
 (use-package company
   :config
   (setq company-idle-delay nil)
