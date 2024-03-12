@@ -129,7 +129,7 @@
 
 (global-set-key (kbd "<C-M-return>") 'be/open-line-above)
 
-(global-set-key (kbd "<f5>") 'compile)
+(global-set-key (kbd "C-c c") 'compile)
 
 
 ;; ------------
