@@ -79,8 +79,8 @@
   :bind (("M-x" . smex)
 	 ("M-X" . execute-extended-command)))
 
-(add-hook 'c-mode-hook #'borealis-cc-mode-fix-indents)
-(add-hook 'c++-mode #'borealis-cc-mode-fix-indents)
+(add-hook 'c-mode-hook #'be/cc-mode-fix-indents)
+(add-hook 'c++-mode-hook #'be/cc-mode-fix-indents)
 
 (use-package gruber-darker-theme
   :config
