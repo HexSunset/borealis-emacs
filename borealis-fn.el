@@ -72,7 +72,7 @@
   "Move region (transient-mark-mode active) or current line
   arg lines up."
   (interactive "*p")
-  (move-text-internal (- arg)))
+  (be/move-text-internal (- arg)))
 
 (defun be/make-directory-if-not (DIR)
   "Create DIR if it doesn't exist and return it's name"
