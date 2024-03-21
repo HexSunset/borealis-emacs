@@ -119,30 +119,29 @@
 
 ;; make M-f act more like "w" in vim
 (require 'misc)
-(global-unset-key (kbd "M-f")) ;; forward-word
-(global-set-key (kbd "M-f") 'forward-to-word)
-(global-set-key (kbd "M-e") 'forward-word)
+(keymap-global-set "M-f" 'forward-to-word)
+(keymap-global-set "M-e" 'forward-word)
 
 ;; window and buffer manipulations
-(global-set-key (kbd "C-x C-k") 'kill-current-buffer)
-(global-set-key (kbd "C-x 9") 'kill-buffer-and-window)
-(global-set-key (kbd "C-x C-b") 'ibuffer)
+(keymap-global-set "C-x C-k" 'kill-current-buffer)
+(keymap-global-set "C-x 9" 'kill-buffer-and-window)
+(keymap-global-set "C-x C-b" 'ibuffer)
 
-(global-set-key (kbd "C-c o") 'be/clone-line-below)
+(keymap-global-set "C-c o" 'be/clone-line-below)
 
-(global-unset-key (kbd "C-M-p"))
-(global-set-key (kbd "C-M-p") 'be/move-text-up)
+(keymap-global-unset "C-M-p")
+(keymap-global-set "C-M-p" 'be/move-text-up)
 
-(global-unset-key (kbd "C-M-n"))
-(global-set-key (kbd "C-M-n") 'be/move-text-down)
+(keymap-global-unset "C-M-n")
+(keymap-global-set "C-M-n" 'be/move-text-down)
 
-(global-set-key (kbd "C-x C-r") 'be/sudo-find-file)
+(keymap-global-set "C-x C-r" 'be/sudo-find-file)
 
-(global-set-key (kbd "<C-return>") 'be/open-line-below)
+(keymap-global-set "C-RET" 'be/open-line-below)
 
-(global-set-key (kbd "<C-M-return>") 'be/open-line-above)
+(keymap-global-set "C-M-RET" 'be/open-line-above)
 
-(global-set-key (kbd "C-c c") 'compile)
+(keymap-global-set "C-c c" 'compile)
 
 
 ;; ------------
