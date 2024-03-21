@@ -117,6 +117,12 @@
 ;; --------------
 ;; binds that don't fit under a specific package
 
+;; make M-f act more like "w" in vim
+(require 'misc)
+(global-unset-key (kbd "M-f")) ;; forward-word
+(global-set-key (kbd "M-f") 'forward-to-word)
+(global-set-key (kbd "M-F") 'forward-word)
+
 ;; window and buffer manipulations
 (global-set-key (kbd "C-x C-k") 'kill-current-buffer)
 (global-set-key (kbd "C-x 9") 'kill-buffer-and-window)
