@@ -108,6 +108,9 @@
   (global-company-mode)
   :bind ("C-<tab>" . company-complete))
 
+(use-package rust-mode
+  :mode "\\.rs\\`")
+
 
 ;; --------------
 ;; -- KEYBINDS --
