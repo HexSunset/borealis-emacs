@@ -121,7 +121,7 @@
 (require 'misc)
 (global-unset-key (kbd "M-f")) ;; forward-word
 (global-set-key (kbd "M-f") 'forward-to-word)
-(global-set-key (kbd "M-F") 'forward-word)
+(global-set-key (kbd "M-e") 'forward-word)
 
 ;; window and buffer manipulations
 (global-set-key (kbd "C-x C-k") 'kill-current-buffer)
