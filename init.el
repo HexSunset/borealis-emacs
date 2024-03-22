@@ -137,9 +137,8 @@
 
 (keymap-global-set "C-x C-r" 'be/sudo-find-file)
 
-(keymap-global-set "C-RET" 'be/open-line-below)
-
-(keymap-global-set "C-M-RET" 'be/open-line-above)
+(keymap-global-set "C-<return>" 'be/open-line-below)
+(keymap-global-set "C-M-<return>" 'be/open-line-above)
 
 (keymap-global-set "C-c c" 'compile)
 
