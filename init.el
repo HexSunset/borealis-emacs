@@ -120,7 +120,8 @@
 ;; make M-f act more like "w" in vim
 (require 'misc)
 (keymap-global-set "M-f" 'forward-to-word)
-(keymap-global-set "M-e" 'forward-word)
+(keymap-global-set "M-F" 'forward-word)
+(keymap-global-set "M-B" 'backward-to-word)
 
 ;; window and buffer manipulations
 (keymap-global-set "C-x C-k" 'kill-current-buffer)
