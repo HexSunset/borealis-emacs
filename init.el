@@ -16,8 +16,9 @@
 ;;
 ;; config by Aurora <3
 
-(load-file (concat user-emacs-directory "borealis-fn.el"))
 
+(add-to-list 'load-path "~/.emacs.d/lisp")
+(require 'borealis-fn)
 
 ;; ----------------
 ;; -- APPEARANCE --
