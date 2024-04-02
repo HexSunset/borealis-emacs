@@ -63,6 +63,9 @@
 (setq auto-save-file-name-transforms
       `((".*" ,(be/make-directory-if-not (concat user-emacs-directory "auto-save/")) t)))
 
+;; Fix builtin defaults of cc-mode derivatives
+(add-hook 'c-mode-common-hook #'be/fix-cc-mode-indentation)
+
 
 ;; --------------
 ;; -- PACKAGES --
@@ -78,9 +81,6 @@
 (use-package smex
   :bind (("M-x" . smex)
 	 ("M-X" . execute-extended-command)))
-
-(add-hook 'c-mode-hook #'be/cc-mode-fix-indents)
-(add-hook 'c++-mode-hook #'be/cc-mode-fix-indents)
 
 (use-package gruber-darker-theme
   :config
