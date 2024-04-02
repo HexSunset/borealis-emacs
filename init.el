@@ -98,7 +98,17 @@
 
 (use-package magit)
 
-(use-package yasnippet)
+(use-package multiple-cursors
+  :bind (("C-c n" . 'mc/mark-next-like-this)
+	 ("C-c p" . 'mc/mark-previous-like-this)
+	 ("C-c a" . 'mc/mark-all-like-this)))
+
+(use-package expand-region
+  :bind (("C-." . 'er/expand-region)
+	 ("C-," . 'er/contract-region)))
+
+(use-package yasnippet
+  :config (yas-global-mode 1))
 
 (use-package eglot)
 
