@@ -111,7 +111,8 @@
 (use-package yasnippet
   :config (yas-global-mode 1))
 
-(use-package eglot)
+(use-package eglot
+  :defer t)
 
 (use-package company
   :config
