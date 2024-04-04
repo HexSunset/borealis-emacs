@@ -124,6 +124,9 @@
 (use-package rust-mode
   :mode "\\.rs\\'")
 
+(use-package zig-mode
+  :mode "\\.zig\\'")
+
 
 ;; --------------
 ;; -- KEYBINDS --
