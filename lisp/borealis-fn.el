@@ -87,7 +87,7 @@
 (defun be/fix-cc-mode-indentation ()
   "Set indents to 4 spaces, disable tabs"
   (setq c-basic-offset 4)
-  (indent-tabs-mode nil)
+  (setq tab-width 4)
   (c-set-offset 'substatement-open 0))
 
 (provide 'borealis-fn)
