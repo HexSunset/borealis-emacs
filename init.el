@@ -101,6 +101,7 @@
 (use-package magit)
 
 (use-package multiple-cursors
+  :init (setq mc/always-run-for-all t)
   :bind (("C-c n" . 'mc/mark-next-like-this)
 	 ("C-c p" . 'mc/mark-previous-like-this)
 	 ("C-c a" . 'mc/mark-all-like-this)))
