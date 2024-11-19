@@ -37,12 +37,10 @@
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
 
-;;(set-face-attribute 'fixed-pitch nil :family "Iosevka" :height 150)
-;;(set-face-attribute 'fixed-pitch-serif nil :family "Iosevka Slab" :height 150)
-;;(set-face-attribute 'variable-pitch nil :family "Iosevka Aile" :height 150)
-;;(set-face-attribute 'default nil :font "Iosevka" :height 150)
-(set-frame-font "Iosevka-15" nil t)
-
+(set-face-attribute 'fixed-pitch nil :family "Iosevka" :height 140)
+(set-face-attribute 'fixed-pitch-serif nil :family "Iosevka Slab" :height 140)
+(set-face-attribute 'variable-pitch nil :family "Iosevka Aile" :height 140)
+(set-face-attribute 'default nil :font "Iosevka" :height 140)
 
 ;; --------------
 ;; -- SETTINGS --
