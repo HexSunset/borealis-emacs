@@ -111,6 +111,10 @@
 (use-package yasnippet
   :config (yas-global-mode 1))
 
+(use-package caml
+  :config (require 'caml-font)
+  :mode ("\\.ml\\'" . caml-mode))
+
 (use-package eglot
   :defer t)
 
