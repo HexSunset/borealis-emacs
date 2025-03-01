@@ -33,6 +33,9 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
+;; Disable bell sound on C-g etc
+(setq ring-bell-function 'ignore)
+
 ;; Line numbers
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
