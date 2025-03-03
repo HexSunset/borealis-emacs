@@ -101,6 +101,9 @@
 
 (use-package magit)
 
+(use-package fancy-compilation
+  :config (setq fancy-compilation-mode t))
+
 (use-package multiple-cursors
   :init (setq mc/always-run-for-all t)
   :bind (("C-c n" . 'mc/mark-next-like-this)
@@ -113,6 +116,8 @@
 
 (use-package yasnippet
   :config (yas-global-mode 1))
+
+(use-package markdown-mode)
 
 (use-package dune)
 
