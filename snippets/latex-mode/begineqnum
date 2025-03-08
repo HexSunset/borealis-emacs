@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: begineqnum
-# key: ben
-# --
-\begin{equation}
-$0
-\end{equation}
