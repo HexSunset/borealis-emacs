@@ -50,6 +50,8 @@
 ;; --------------
 ;; settings that don't belong with a specific package
 
+(setq mark-even-if-inactive nil) ;; Disable functions that use mark when it isn't active.
+
 (setq use-short-answers t)
 
 (setq dired-listing-switches "-alh")
