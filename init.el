@@ -52,6 +52,8 @@
 
 (setq mark-even-if-inactive nil) ;; Disable functions that use mark when it isn't active.
 
+(electric-pair-mode t)
+
 (setq use-short-answers t)
 
 (setq dired-listing-switches "-alh")
