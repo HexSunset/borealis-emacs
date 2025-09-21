@@ -144,6 +144,9 @@
 (use-package zig-mode
   :mode "\\.zig\\'")
 
+(use-package idris-mode
+  :mode "\\.idr\\'")
+
 
 ;; --------------
 ;; -- KEYBINDS --
