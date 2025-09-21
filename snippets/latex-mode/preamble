@@ -8,11 +8,14 @@
 \usepackage[utf8]{inputenc}
 \usepackage[estonian]{babel}
 
-\usepackage[a4paper, total={17cm, 27cm}]{geometry}
-
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+
+\newtheorem{ülesanne}[definition]{Ülesanne}
+\newtheorem{ülesanne*}[definition]{Ülesanne*}
+\newtheorem{definitsioon}{Definitsioon}
+\newtheorem{definitsioon*}{Definitsioon*}
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -20,3 +23,14 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Prime}{\mathbb{P}}
+
+\title{}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+$0
+
+\end{document}
