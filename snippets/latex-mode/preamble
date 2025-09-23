@@ -12,10 +12,11 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 
-\newtheorem{ülesanne}[definition]{Ülesanne}
-\newtheorem{ülesanne*}[definition]{Ülesanne*}
+\theoremstyle{definition}
+\newtheorem{ülesanne}{Ülesanne}
 \newtheorem{definitsioon}{Definitsioon}
-\newtheorem{definitsioon*}{Definitsioon*}
+
+\newenvironment{lahendus}{\begin{proof}[Lahendus]\renewcommand\qedsymbol{}}{\end{proof}}
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
