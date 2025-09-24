@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: cases
+# key: cases
+# --
+\begin{cases}
+$1, & \text{kui } $2 \\\\
+$3, & \text{kui } $4
+\end{cases}
