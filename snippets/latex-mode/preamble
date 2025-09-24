@@ -18,6 +18,9 @@
 
 \newenvironment{lahendus}{\begin{proof}[Lahendus]\renewcommand\qedsymbol{}}{\end{proof}}
 
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
