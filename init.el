@@ -119,7 +119,9 @@
 	 ("C-," . 'er/contract-region)))
 
 (use-package yasnippet
-  :config (yas-global-mode 1))
+  :config
+  (yas-global-mode 1)
+  (setq yas-triggers-in-field t))
 
 (use-package markdown-mode)
 
