@@ -149,6 +149,9 @@
 (use-package idris-mode
   :mode "\\.idr\\'")
 
+(use-package auctex
+  :config (TeX-fold-mode 1))
+
 
 ;; --------------
 ;; -- KEYBINDS --
