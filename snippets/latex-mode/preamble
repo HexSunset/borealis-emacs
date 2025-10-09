@@ -22,6 +22,7 @@
 \renewcommand{\phi}{\varphi}
 
 \renewcommand{\iff}{\Leftrightarrow}
+\renewcommand{\implies}{\Rightarrow}
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
