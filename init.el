@@ -150,7 +150,8 @@
   :mode "\\.idr\\'")
 
 (use-package auctex
-  :config (TeX-fold-mode 1))
+  :config (TeX-fold-mode 1)
+  :hook (LaTeX-mode-hook . LaTeX-math-mode))
 
 
 ;; --------------
