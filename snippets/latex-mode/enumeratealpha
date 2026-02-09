@@ -2,6 +2,6 @@
 # name: enumeratealpha
 # key: enuma
 # --
-\begin{enumerate}\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}\renewcommand{\labelenumi}{\alph{enumi})}
 \item $0
 \end{enumerate}
