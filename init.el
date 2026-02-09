@@ -56,7 +56,7 @@
 
 (setq use-short-answers t)
 
-(setq dired-listing-switches "-alh")
+(setq dired-listing-switches "-lh")
 (put 'dired-find-alternate-file 'disabled nil)
 
 ;; auto refresh things like dired, quietly
@@ -150,6 +150,7 @@
   :mode "\\.idr\\'")
 
 (use-package auctex
+  :mode ("\\.tex\\'" . LaTeX-mode)
   :config (TeX-fold-mode 1)
   :hook (LaTeX-mode-hook . LaTeX-math-mode))
 
