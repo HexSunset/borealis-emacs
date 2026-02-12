@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: enumerateAlpha
+# key: enumA
+# --
+\begin{enumerate}\renewcommand{\labelenumi}{[\textbf{\Alph{enumi}}]}
+\item $0
+\end{enumerate}
