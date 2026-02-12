@@ -4,6 +4,7 @@
 # --
 \documentclass{article}
 
+\usepackage[a4paper, margins=1cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[estonian]{babel}
@@ -16,6 +17,9 @@
 \newtheorem{ülesanne}{Ülesanne}
 \newtheorem{tülesanne}[ülesanne]{*Ülesanne}
 \newtheorem{definitsioon}{Definitsioon}
+\newtheorem{teoreem}{Teoreem}
+\newtheorem{lause}{Lause}
+\newtheorem{lemma}{Lemma}
 
 \newenvironment{lahendus}{\begin{proof}[Lahendus]\renewcommand\qedsymbol{}}{\end{proof}}
 
