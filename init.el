@@ -56,7 +56,7 @@
 
 (setq use-short-answers t)
 
-(setq dired-listing-switches "-lh")
+(setq dired-listing-switches "-lah")
 (put 'dired-find-alternate-file 'disabled nil)
 
 ;; auto refresh things like dired, quietly
@@ -140,14 +140,15 @@
   (global-company-mode)
   :bind ("C-<tab>" . company-complete))
 
+(use-package idris-mode
+  :config (setq idris-interpreter-path "idris2")
+  :mode "\\.idr\\'")
+
 (use-package rust-mode
   :mode "\\.rs\\'")
 
 (use-package zig-mode
   :mode "\\.zig\\'")
-
-(use-package idris-mode
-  :mode "\\.idr\\'")
 
 (use-package auctex
   :mode ("\\.tex\\'" . LaTeX-mode)
@@ -196,7 +197,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(package-selected-packages
+   '(auctex caml company csv-mode dune expand-region fancy-compilation
+	    gruber-darker-theme idris-mode idris2-mode lua-mode magit
+	    markdown-mode multiple-cursors rust-mode smex yasnippet
+	    zig-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
