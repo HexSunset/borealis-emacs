@@ -37,6 +37,8 @@
 \newcommand{\K}{\mathbb{K}}
 \newcommand{\Prime}{\mathbb{P}}
 
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+
 \title{}
 \author{}
 
