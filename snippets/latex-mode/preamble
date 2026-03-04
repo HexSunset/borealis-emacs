@@ -45,6 +45,7 @@
 
 \newcommand{\FA}{\mathfrak{A}}
 
+\newcommand{\normOp}{\left\Vert \cdot \right\Vert}
 \newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
 
 \title{}
