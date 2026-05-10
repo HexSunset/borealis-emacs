@@ -45,6 +45,8 @@
 
 \newcommand{\FA}{\mathfrak{A}}
 
+\newcommand{\absolute}[1]{\left| #1 \right|}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
 \newcommand{\normOp}{\left\Vert \cdot \right\Vert}
 \newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
 
